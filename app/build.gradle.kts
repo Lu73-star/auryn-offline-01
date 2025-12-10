@@ -1,8 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("kotlin-kapt")                    // se não usar Hilt, ainda pode manter para outros processors
-    id("com.google.dagger.hilt.android") // se ainda não usa Hilt, pode comentar/remover
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -42,7 +42,6 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.12.0")
 
-    // Hilt (se não estiver usando ainda, pode remover estas linhas por enquanto)
     implementation("com.google.dagger:hilt-android:2.52")
     kapt("com.google.dagger:hilt-android-compiler:2.52")
 }
