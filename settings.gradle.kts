@@ -14,5 +14,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "auryn-offline-01" // ou "AurynOffline", escolha um nome e mantenha igual ao do seu projeto
+rootProject.name = "auryn-offline-01"
 include(":app")
