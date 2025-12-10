@@ -14,5 +14,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "auryn-offline-01"
+rootProject.name = "AurynOffline"
 include(":app")
