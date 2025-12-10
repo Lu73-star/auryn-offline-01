@@ -1,13 +1,28 @@
-// build.gradle.kts (raiz) - exemplo mínimo
 plugins {
-    // Declare plugins com 'apply false' aqui se quiser centralizar versões, ex:
-    // id("com.android.application") version "8.1.0" apply false
-    // kotlin("android") version "1.9.10" apply false
+    id("com.android.application")
+    kotlin("android")
 }
 
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
+android {
+    compileSdk = 34
+
+    defaultConfig {
+        applicationId = "com.example.aurynoffline"
+        minSdk = 21
+        targetSdk = 34
+        versionCode = 1
+        versionName = "0.1.0"
     }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+
+dependencies {
+    implementation("org.jetbrains.kotlin:kotlin-stdlib")
 }
