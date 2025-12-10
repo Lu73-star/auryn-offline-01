@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.aurynoffline" // <-- adicione esta linha
+    namespace = "com.example.aurynoffline"
     compileSdk = 34
 
     defaultConfig {
