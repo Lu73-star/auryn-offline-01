@@ -4,15 +4,25 @@ plugins {
 }
 
 android {
-    namespace = "com.example.aurynoffline"
+    namespace = "com.auryn.offline"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.aurynoffline"
-        minSdk = 21
+        applicationId = "com.auryn.offline"
+        minSdk = 24
         targetSdk = 34
         versionCode = 1
-        versionName = "0.1.0"
+        versionName = "1.0"
+    }
+
+    buildTypes {
+        release {
+            isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
     }
 
     compileOptions {
@@ -26,5 +36,7 @@ android {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib")
+    implementation("androidx.core:core-ktx:1.13.1")
+    implementation("androidx.appcompat:appcompat:1.7.0")
+    implementation("com.google.android.material:material:1.12.0")
 }
