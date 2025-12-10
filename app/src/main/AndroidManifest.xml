@@ -1,31 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+defaultConfig {
+    applicationId = "com.example.aurynoffline"
+    minSdk = 21
+    targetSdk = 34
+    versionCode = 1
+    versionName = "0.1.0"
+}
 
-    <!-- Permissions for offline voice functionality -->
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    
-    <!-- Internet permission for future API integration -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+compileOptions {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
 
-    <application
-        android:name=".AurynApplication"
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.AurynOffline">
-        
-        <activity
-            android:name=".presentation.MainActivity"
-            android:exported="true"
-            android:theme="@style/Theme.AurynOffline">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-    </application>
-
-</manifest>
+kotlinOptions {
+    jvmTarget = "17"
+}
