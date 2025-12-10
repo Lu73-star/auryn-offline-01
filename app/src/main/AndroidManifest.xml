@@ -1,16 +1,18 @@
-defaultConfig {
-    applicationId = "com.example.aurynoffline"
-    minSdk = 21
-    targetSdk = 34
-    versionCode = 1
-    versionName = "0.1.0"
-}
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-compileOptions {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
-}
+    <application
+        android:label="Auryn Offline"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
 
-kotlinOptions {
-    jvmTarget = "17"
-}
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
