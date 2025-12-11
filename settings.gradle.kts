@@ -1,3 +1,5 @@
+// Arquivo: settings.gradle.kts
+
 pluginManagement {
     repositories {
         google()
